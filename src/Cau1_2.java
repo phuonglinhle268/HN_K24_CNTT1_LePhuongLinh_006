@@ -25,9 +25,3 @@ public class Cau1_2 {
         System.out.println(result);
     }
 }
-
-
-//1.2.chuẩn hóa chuỗi họ tên
-//nhập 1 chuỗi tên người dùng nhập lộn xộn(nhiều khoảng trắng, viết hoa/thường tùy tiện)
-// hãy chuẩn hóa lại theo quy tắc Title case (viết hoa chữ cái đầu mỗi từ, các chữ cái sau viết thường, mỗi từ cách nhau
-// đúng 1 khoảng trắng
