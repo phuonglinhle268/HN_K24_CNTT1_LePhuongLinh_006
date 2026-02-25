@@ -2,13 +2,27 @@ import java.util.Scanner;
 
 public class Cau1_1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String s = scanner.nextLine();
-        s = s.trim();
-        String result = " ";
-        boolean checkName = false;
+        System.out.print("Nhập chuỗi chữ thường: ");
+        String s = sc.nextLine();
 
+        int[] checkName = new int[256];
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            checkName[c]++;
+        }
+
+        char result = '_';
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (checkName[c] == 1) {
+                result = c;
+                break;
+            }
+        }
+        System.out.println("Ký tự đầu tiên: " + result);
     }
 }
 

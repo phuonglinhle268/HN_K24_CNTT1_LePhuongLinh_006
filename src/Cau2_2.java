@@ -2,23 +2,33 @@ import java.util.Scanner;
 
 public class Cau2_2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Nhập số phần tử cho mảng: ");
-        int n = scanner.nextInt();
-        int[] arr = new int[n];
+        System.out.print("Nhập số lượng phần tử: ");
+        int n = sc.nextInt();
 
-        for (int i = 0; i < n; i++){
-            arr[i] = scanner.nextInt();
+        int[] A = new int[n];
+        System.out.print("Nhập các phần tử: ");
+        for (int i = 0; i < n; i++) {
+            A[i] = sc.nextInt();
         }
 
-        int newSize = 0;
+        int[] B = new int[n];
+        int left = 1;
+        for (int i = 0; i < n; i++) {
+            B[i] = left;
+            left *= A[i];
+        }
 
-        for (int i=0; i<n; i++){
-            if (arr[i] >= 0){
-                arr[newSize] = arr[i];
-                newSize++;
-            }
+        int right = 1;
+        for (int i = n - 1; i >= 0; i--) {
+            B[i] *= right;
+            right *= A[i];
+        }
+
+        System.out.print("Mảng B: ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(B[i] + " ");
         }
     }
 }

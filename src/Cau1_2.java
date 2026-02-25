@@ -2,26 +2,26 @@ import java.util.Scanner;
 
 public class Cau1_2 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String s = scanner.nextLine();
-        s = s.trim();
-        String result = "";
-        boolean lastIsPlace = false;
+        System.out.print("Nhập họ tên: ");
+        String name = sc.nextLine();
+        name = name.trim().toLowerCase();
 
-        for (int i=0;  i <s.length(); i++){
-            char c = s.charAt(i);
+        String[] parts = name.split("\\s+");
+        StringBuilder sb = new StringBuilder();
 
-            if (c == ' '){
-                if (!lastIsPlace){
-                    result += " ";
-                }
-                lastIsPlace = true;
-            } else {
-                result += c;
-                lastIsPlace = false;
+        for (int i = 0; i < parts.length; i++) {
+            String p = parts[i];
+            char firstChar = Character.toUpperCase(p.charAt(0));
+            String rest = p.substring(1);
+
+            sb.append(firstChar).append(rest);
+
+            if (i < parts.length - 1){
+                sb.append(" ");
             }
         }
-        System.out.println(result);
+        System.out.println("Tên mới: " + sb.toString());
     }
 }
