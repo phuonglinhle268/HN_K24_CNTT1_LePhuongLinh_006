@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Cau1_1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nhập chuỗi chữ thường: ");
-        String s = sc.nextLine();
+        String s = scanner.nextLine();
 
         int[] checkName = new int[256];
         for (int i = 0; i < s.length(); i++) {
@@ -22,7 +22,7 @@ public class Cau1_1 {
                 break;
             }
         }
-        System.out.println("Ký tự đầu tiên: " + result);
+        System.out.print("Ký tự đầu tiên: " + result);
     }
 }
 

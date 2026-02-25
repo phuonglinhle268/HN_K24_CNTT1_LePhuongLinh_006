@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Cau1_2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nhập họ tên: ");
-        String name = sc.nextLine();
+        String name = scanner.nextLine();
         name = name.trim().toLowerCase();
 
         String[] parts = name.split("\\s+");
@@ -22,6 +22,6 @@ public class Cau1_2 {
                 sb.append(" ");
             }
         }
-        System.out.println("Tên mới: " + sb.toString());
+        System.out.print("Tên mới: " + sb.toString());
     }
 }
