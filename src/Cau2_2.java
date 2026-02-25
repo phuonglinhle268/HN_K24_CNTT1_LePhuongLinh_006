@@ -25,7 +25,6 @@ public class Cau2_2 {
 
 
 
-//
 //2.2.tính các ptu ngoại trừ chính nó
 //cho mảng số nguyên A gồm n phần tử
 //hãy tạo ra một mảng B sao cho mỗi phần tử B[i] bằng tích tất cả các phần tử trong mảng A, ngoại trừ A[i]
